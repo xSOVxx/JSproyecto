@@ -1,0 +1,29 @@
+0 verbose cli D:\Dictado Cursos\UTP\Software\nodejs\node.exe D:\Dictado Cursos\UTP\Software\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.15.0
+3 silly config load:file:D:\Dictado Cursos\UTP\Software\nodejs\node_modules\npm\npmrc
+4 silly config load:file:D:\Dictado Cursos\UTP\Software\proyectos\mi-proyecto-node\.npmrc
+5 silly config load:file:C:\Users\ANTHONY\.npmrc
+6 silly config load:file:D:\Dictado Cursos\UTP\Software\npm-global\etc\npmrc
+7 verbose title npm init
+8 verbose argv "init" "--yes"
+9 verbose logfile logs-max:10 dir:D:\Dictado Cursos\UTP\Software\npm-cache\_logs\2025-04-27T19_44_00_913Z-
+10 verbose logfile D:\Dictado Cursos\UTP\Software\npm-cache\_logs\2025-04-27T19_44_00_913Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 silly package data {
+13 silly package data   name: 'mi-proyecto-node',
+13 silly package data   version: '1.0.0',
+13 silly package data   main: 'index.js',
+13 silly package data   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+13 silly package data   keywords: [],
+13 silly package data   author: '',
+13 silly package data   license: 'ISC',
+13 silly package data   description: ''
+13 silly package data }
+14 verbose cwd D:\Dictado Cursos\UTP\Software\proyectos\mi-proyecto-node
+15 verbose os Windows_NT 10.0.19043
+16 verbose node v22.15.0
+17 verbose npm  v10.9.2
+18 verbose exit 0
+19 info ok

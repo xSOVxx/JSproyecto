@@ -1,0 +1,209 @@
+0 verbose cli D:\Dictado Cursos\UTP\Semestre 20251\JavaScript Avanzado\TurismoAngular\nodejs\node.exe D:\Dictado Cursos\UTP\Semestre 20251\JavaScript Avanzado\TurismoAngular\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.15.0
+3 silly config load:file:D:\Dictado Cursos\UTP\Semestre 20251\JavaScript Avanzado\TurismoAngular\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\ANTHONY\AppData\Local\Microsoft\TypeScript\5.9\.npmrc
+5 silly config load:file:C:\Users\ANTHONY\.npmrc
+6 silly config load:file:D:\Dictado Cursos\UTP\Semestre 20251\JavaScript Avanzado\TurismoAngular\npm-global\etc\npmrc
+7 verbose title npm install @types/cors@ts5.9 @types/json-server@ts5.9 @types/multer@ts5.9
+8 verbose argv "install" "--ignore-scripts" "@types/cors@ts5.9" "@types/json-server@ts5.9" "@types/multer@ts5.9" "--save-dev" "--user-agent" "typesInstaller/5.9.0-dev.20250514"
+9 verbose logfile logs-max:10 dir:D:\Dictado Cursos\UTP\Semestre 20251\JavaScript Avanzado\TurismoAngular\npm-cache\_logs\2025-05-17T22_36_27_338Z-
+10 verbose logfile D:\Dictado Cursos\UTP\Semestre 20251\JavaScript Avanzado\TurismoAngular\npm-cache\_logs\2025-05-17T22_36_27_338Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 silly logfile done cleaning log files
+14 silly packumentCache corgi:https://registry.npmjs.org/@types%2fcors cache-miss
+15 silly packumentCache corgi:https://registry.npmjs.org/@types%2fjson-server cache-miss
+16 silly packumentCache corgi:https://registry.npmjs.org/@types%2fmulter cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/@types%2fmulter 661ms (cache miss)
+18 silly packumentCache corgi:https://registry.npmjs.org/@types%2fmulter set size:undefined disposed:false
+19 http fetch GET 200 https://registry.npmjs.org/@types%2fjson-server 675ms (cache miss)
+20 silly packumentCache corgi:https://registry.npmjs.org/@types%2fjson-server set size:undefined disposed:false
+21 http fetch GET 200 https://registry.npmjs.org/@types%2fcors 691ms (cache miss)
+22 silly packumentCache corgi:https://registry.npmjs.org/@types%2fcors set size:undefined disposed:false
+23 silly idealTree buildDeps
+24 silly fetch manifest @types/multer@1.4.12
+25 silly packumentCache full:https://registry.npmjs.org/@types%2fmulter cache-miss
+26 http fetch GET 200 https://registry.npmjs.org/@types%2fmulter 185ms (cache miss)
+27 silly packumentCache full:https://registry.npmjs.org/@types%2fmulter set size:undefined disposed:false
+28 silly fetch manifest @types/json-server@0.14.8
+29 silly packumentCache full:https://registry.npmjs.org/@types%2fjson-server cache-miss
+30 http fetch GET 200 https://registry.npmjs.org/@types%2fjson-server 1459ms (cache miss)
+31 silly packumentCache full:https://registry.npmjs.org/@types%2fjson-server set size:undefined disposed:false
+32 silly fetch manifest @types/cors@2.8.18
+33 silly packumentCache full:https://registry.npmjs.org/@types%2fcors cache-miss
+34 http fetch GET 200 https://registry.npmjs.org/@types%2fcors 178ms (cache miss)
+35 silly packumentCache full:https://registry.npmjs.org/@types%2fcors set size:undefined disposed:false
+36 silly placeDep ROOT @types/cors@2.8.18 OK for:  want: 2.8.18
+37 silly placeDep ROOT @types/json-server@0.14.8 OK for:  want: 0.14.8
+38 silly placeDep ROOT @types/multer@1.4.12 OK for:  want: 1.4.12
+39 silly fetch manifest @types/node@*
+40 silly packumentCache full:https://registry.npmjs.org/@types%2fnode cache-miss
+41 silly fetch manifest @types/lowdb@<2
+42 silly packumentCache full:https://registry.npmjs.org/@types%2flowdb cache-miss
+43 silly fetch manifest @types/connect@*
+44 silly packumentCache full:https://registry.npmjs.org/@types%2fconnect cache-miss
+45 http fetch GET 200 https://registry.npmjs.org/@types%2flowdb 185ms (cache miss)
+46 silly packumentCache full:https://registry.npmjs.org/@types%2flowdb set size:undefined disposed:false
+47 silly fetch manifest @types/express@*
+48 silly packumentCache full:https://registry.npmjs.org/@types%2fexpress cache-miss
+49 http fetch GET 200 https://registry.npmjs.org/@types%2fconnect 190ms (cache revalidated)
+50 silly packumentCache full:https://registry.npmjs.org/@types%2fconnect set size:31495 disposed:false
+51 silly fetch manifest @types/express@*
+52 silly packumentCache full:https://registry.npmjs.org/@types%2fexpress cache-miss
+53 http fetch GET 200 https://registry.npmjs.org/@types%2fexpress 256ms (cache updated)
+54 silly packumentCache full:https://registry.npmjs.org/@types%2fexpress set size:undefined disposed:false
+55 http fetch GET 200 https://registry.npmjs.org/@types%2fexpress 275ms (cache updated)
+56 silly packumentCache full:https://registry.npmjs.org/@types%2fexpress set size:undefined disposed:false
+57 http fetch GET 200 https://registry.npmjs.org/@types%2fnode 685ms (cache updated)
+58 silly packumentCache full:https://registry.npmjs.org/@types%2fnode set size:undefined disposed:false
+59 silly placeDep ROOT @types/node@22.15.18 OK for: @types/cors@2.8.18 want: *
+60 silly fetch manifest undici-types@~6.21.0
+61 silly packumentCache full:https://registry.npmjs.org/undici-types cache-miss
+62 http fetch GET 200 https://registry.npmjs.org/undici-types 162ms (cache updated)
+63 silly packumentCache full:https://registry.npmjs.org/undici-types set size:undefined disposed:false
+64 silly placeDep ROOT @types/connect@3.4.38 OK for: @types/json-server@0.14.8 want: *
+65 silly placeDep ROOT @types/express@5.0.2 OK for: @types/json-server@0.14.8 want: *
+66 silly placeDep ROOT @types/lowdb@1.0.15 OK for: @types/json-server@0.14.8 want: <2
+67 silly fetch manifest @types/body-parser@*
+68 silly packumentCache full:https://registry.npmjs.org/@types%2fbody-parser cache-miss
+69 silly fetch manifest @types/serve-static@*
+70 silly packumentCache full:https://registry.npmjs.org/@types%2fserve-static cache-miss
+71 silly fetch manifest @types/express-serve-static-core@^5.0.0
+72 silly packumentCache full:https://registry.npmjs.org/@types%2fexpress-serve-static-core cache-miss
+73 http fetch GET 200 https://registry.npmjs.org/@types%2fserve-static 168ms (cache revalidated)
+74 silly packumentCache full:https://registry.npmjs.org/@types%2fserve-static set size:63293 disposed:false
+75 silly fetch manifest @types/lodash@*
+76 silly packumentCache full:https://registry.npmjs.org/@types%2flodash cache-miss
+77 http fetch GET 200 https://registry.npmjs.org/@types%2fexpress-serve-static-core 177ms (cache revalidated)
+78 silly packumentCache full:https://registry.npmjs.org/@types%2fexpress-serve-static-core set size:253879 disposed:false
+79 http fetch GET 200 https://registry.npmjs.org/@types%2fbody-parser 194ms (cache revalidated)
+80 silly packumentCache full:https://registry.npmjs.org/@types%2fbody-parser set size:57146 disposed:false
+81 http fetch GET 200 https://registry.npmjs.org/@types%2flodash 197ms (cache miss)
+82 silly packumentCache full:https://registry.npmjs.org/@types%2flodash set size:undefined disposed:false
+83 silly placeDep ROOT @types/body-parser@1.19.5 OK for: @types/express@5.0.2 want: *
+84 silly placeDep ROOT @types/express-serve-static-core@5.0.6 OK for: @types/express@5.0.2 want: ^5.0.0
+85 silly placeDep ROOT @types/serve-static@1.15.7 OK for: @types/express@5.0.2 want: *
+86 silly fetch manifest @types/qs@*
+87 silly packumentCache full:https://registry.npmjs.org/@types%2fqs cache-miss
+88 silly fetch manifest @types/send@*
+89 silly packumentCache full:https://registry.npmjs.org/@types%2fsend cache-miss
+90 silly fetch manifest @types/range-parser@*
+91 silly packumentCache full:https://registry.npmjs.org/@types%2frange-parser cache-miss
+92 http fetch GET 200 https://registry.npmjs.org/@types%2frange-parser 167ms (cache revalidated)
+93 silly packumentCache full:https://registry.npmjs.org/@types%2frange-parser set size:15262 disposed:false
+94 silly fetch manifest @types/send@*
+95 silly packumentCache full:https://registry.npmjs.org/@types%2fsend cache-miss
+96 http fetch GET 200 https://registry.npmjs.org/@types%2fsend 180ms (cache revalidated)
+97 silly packumentCache full:https://registry.npmjs.org/@types%2fsend set size:23093 disposed:false
+98 silly fetch manifest @types/http-errors@*
+99 silly packumentCache full:https://registry.npmjs.org/@types%2fhttp-errors cache-miss
+100 http fetch GET 200 https://registry.npmjs.org/@types%2fqs 190ms (cache updated)
+101 silly packumentCache full:https://registry.npmjs.org/@types%2fqs set size:undefined disposed:false
+102 http fetch GET 200 https://registry.npmjs.org/@types%2fsend 174ms (cache revalidated)
+103 silly packumentCache full:https://registry.npmjs.org/@types%2fsend set size:23093 disposed:false
+104 silly packumentCache full:https://registry.npmjs.org/@types%2fsend dispose
+105 http fetch GET 200 https://registry.npmjs.org/@types%2fhttp-errors 166ms (cache revalidated)
+106 silly packumentCache full:https://registry.npmjs.org/@types%2fhttp-errors set size:47170 disposed:false
+107 silly placeDep ROOT @types/qs@6.14.0 OK for: @types/express-serve-static-core@5.0.6 want: *
+108 silly placeDep ROOT @types/range-parser@1.2.7 OK for: @types/express-serve-static-core@5.0.6 want: *
+109 silly placeDep ROOT @types/send@0.17.4 OK for: @types/express-serve-static-core@5.0.6 want: *
+110 silly fetch manifest @types/mime@^1
+111 silly packumentCache full:https://registry.npmjs.org/@types%2fmime cache-miss
+112 http fetch GET 200 https://registry.npmjs.org/@types%2fmime 195ms (cache revalidated)
+113 silly packumentCache full:https://registry.npmjs.org/@types%2fmime set size:43242 disposed:false
+114 silly placeDep ROOT @types/lodash@4.17.16 OK for: @types/lowdb@1.0.15 want: *
+115 silly placeDep ROOT undici-types@6.21.0 OK for: @types/node@22.15.18 want: ~6.21.0
+116 silly placeDep ROOT @types/mime@1.3.5 OK for: @types/send@0.17.4 want: ^1
+117 silly placeDep ROOT @types/http-errors@2.0.4 OK for: @types/serve-static@1.15.7 want: *
+118 silly reify moves {}
+119 silly audit bulk request {
+119 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+119 silly audit   '@babel/helper-validator-identifier': [ '7.27.1' ],
+119 silly audit   '@babel/parser': [ '7.27.1' ],
+119 silly audit   '@babel/types': [ '7.27.1' ],
+119 silly audit   '@popperjs/core': [ '2.11.8' ],
+119 silly audit   '@types/babel__core': [ '7.20.5' ],
+119 silly audit   '@types/babel__generator': [ '7.27.0' ],
+119 silly audit   '@types/babel__preset-env': [ '7.10.0' ],
+119 silly audit   '@types/babel__template': [ '7.4.4' ],
+119 silly audit   '@types/babel__traverse': [ '7.20.7' ],
+119 silly audit   '@types/bootstrap': [ '5.2.10' ],
+119 silly audit   '@types/copyfiles': [ '2.4.4' ],
+119 silly audit   'types-registry': [ '0.1.720' ],
+119 silly audit   '@types/cors': [ '2.8.18' ],
+119 silly audit   '@types/json-server': [ '0.14.8' ],
+119 silly audit   '@types/multer': [ '1.4.12' ],
+119 silly audit   '@types/node': [ '22.15.18' ],
+119 silly audit   '@types/connect': [ '3.4.38' ],
+119 silly audit   '@types/express': [ '5.0.2' ],
+119 silly audit   '@types/lowdb': [ '1.0.15' ],
+119 silly audit   '@types/body-parser': [ '1.19.5' ],
+119 silly audit   '@types/express-serve-static-core': [ '5.0.6' ],
+119 silly audit   '@types/serve-static': [ '1.15.7' ],
+119 silly audit   '@types/qs': [ '6.14.0' ],
+119 silly audit   '@types/range-parser': [ '1.2.7' ],
+119 silly audit   '@types/send': [ '0.17.4' ],
+119 silly audit   '@types/lodash': [ '4.17.16' ],
+119 silly audit   'undici-types': [ '6.21.0' ],
+119 silly audit   '@types/mime': [ '1.3.5' ],
+119 silly audit   '@types/http-errors': [ '2.0.4' ]
+119 silly audit }
+120 http cache @types/http-errors@https://registry.npmjs.org/@types/http-errors/-/http-errors-2.0.4.tgz 0ms (cache hit)
+121 http cache @types/mime@https://registry.npmjs.org/@types/mime/-/mime-1.3.5.tgz 0ms (cache hit)
+122 http cache undici-types@https://registry.npmjs.org/undici-types/-/undici-types-6.21.0.tgz 0ms (cache hit)
+123 http cache @types/lodash@https://registry.npmjs.org/@types/lodash/-/lodash-4.17.16.tgz 0ms (cache hit)
+124 http cache @types/send@https://registry.npmjs.org/@types/send/-/send-0.17.4.tgz 0ms (cache hit)
+125 http cache @types/range-parser@https://registry.npmjs.org/@types/range-parser/-/range-parser-1.2.7.tgz 0ms (cache hit)
+126 http cache @types/qs@https://registry.npmjs.org/@types/qs/-/qs-6.14.0.tgz 0ms (cache hit)
+127 http cache @types/serve-static@https://registry.npmjs.org/@types/serve-static/-/serve-static-1.15.7.tgz 0ms (cache hit)
+128 http cache @types/express-serve-static-core@https://registry.npmjs.org/@types/express-serve-static-core/-/express-serve-static-core-5.0.6.tgz 0ms (cache hit)
+129 http cache @types/body-parser@https://registry.npmjs.org/@types/body-parser/-/body-parser-1.19.5.tgz 0ms (cache hit)
+130 http cache @types/lowdb@https://registry.npmjs.org/@types/lowdb/-/lowdb-1.0.15.tgz 0ms (cache hit)
+131 http cache @types/express@https://registry.npmjs.org/@types/express/-/express-5.0.2.tgz 0ms (cache hit)
+132 http cache @types/connect@https://registry.npmjs.org/@types/connect/-/connect-3.4.38.tgz 0ms (cache hit)
+133 http cache @types/node@https://registry.npmjs.org/@types/node/-/node-22.15.18.tgz 0ms (cache hit)
+134 http cache @types/multer@https://registry.npmjs.org/@types/multer/-/multer-1.4.12.tgz 0ms (cache hit)
+135 http cache @types/json-server@https://registry.npmjs.org/@types/json-server/-/json-server-0.14.8.tgz 0ms (cache hit)
+136 silly tarball no local data for @types/lodash@https://registry.npmjs.org/@types/lodash/-/lodash-4.17.16.tgz. Extracting by manifest.
+137 silly tarball no local data for @types/qs@https://registry.npmjs.org/@types/qs/-/qs-6.14.0.tgz. Extracting by manifest.
+138 silly tarball no local data for @types/lowdb@https://registry.npmjs.org/@types/lowdb/-/lowdb-1.0.15.tgz. Extracting by manifest.
+139 silly tarball no local data for @types/express@https://registry.npmjs.org/@types/express/-/express-5.0.2.tgz. Extracting by manifest.
+140 silly tarball no local data for @types/node@https://registry.npmjs.org/@types/node/-/node-22.15.18.tgz. Extracting by manifest.
+141 http cache @types/cors@https://registry.npmjs.org/@types/cors/-/cors-2.8.18.tgz 0ms (cache hit)
+142 silly tarball no local data for @types/multer@https://registry.npmjs.org/@types/multer/-/multer-1.4.12.tgz. Extracting by manifest.
+143 silly tarball no local data for @types/json-server@https://registry.npmjs.org/@types/json-server/-/json-server-0.14.8.tgz. Extracting by manifest.
+144 silly tarball no local data for @types/cors@https://registry.npmjs.org/@types/cors/-/cors-2.8.18.tgz. Extracting by manifest.
+145 http fetch GET 200 https://registry.npmjs.org/@types/qs/-/qs-6.14.0.tgz 214ms (cache miss)
+146 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 494ms
+147 silly audit report {}
+148 http fetch GET 200 https://registry.npmjs.org/@types/express/-/express-5.0.2.tgz 615ms (cache miss)
+149 http fetch GET 200 https://registry.npmjs.org/@types/cors/-/cors-2.8.18.tgz 611ms (cache miss)
+150 http fetch GET 200 https://registry.npmjs.org/@types/json-server/-/json-server-0.14.8.tgz 626ms (cache miss)
+151 http fetch GET 200 https://registry.npmjs.org/@types/lowdb/-/lowdb-1.0.15.tgz 652ms (cache miss)
+152 http fetch GET 200 https://registry.npmjs.org/@types/node/-/node-22.15.18.tgz 863ms (cache miss)
+153 http fetch GET 200 https://registry.npmjs.org/@types/lodash/-/lodash-4.17.16.tgz 1116ms (cache miss)
+154 http fetch GET 200 https://registry.npmjs.org/@types/multer/-/multer-1.4.12.tgz 1351ms (cache miss)
+155 silly ADD node_modules/@types/http-errors
+156 silly ADD node_modules/@types/mime
+157 silly ADD node_modules/undici-types
+158 silly ADD node_modules/@types/lodash
+159 silly ADD node_modules/@types/send
+160 silly ADD node_modules/@types/range-parser
+161 silly ADD node_modules/@types/qs
+162 silly ADD node_modules/@types/serve-static
+163 silly ADD node_modules/@types/express-serve-static-core
+164 silly ADD node_modules/@types/body-parser
+165 silly ADD node_modules/@types/lowdb
+166 silly ADD node_modules/@types/express
+167 silly ADD node_modules/@types/connect
+168 silly ADD node_modules/@types/node
+169 silly ADD node_modules/@types/multer
+170 silly ADD node_modules/@types/json-server
+171 silly ADD node_modules/@types/cors
+172 verbose cwd C:\Users\ANTHONY\AppData\Local\Microsoft\TypeScript\5.9
+173 verbose os Windows_NT 10.0.19043
+174 verbose node v22.15.0
+175 verbose npm  v10.9.2
+176 verbose exit 0
+177 info ok

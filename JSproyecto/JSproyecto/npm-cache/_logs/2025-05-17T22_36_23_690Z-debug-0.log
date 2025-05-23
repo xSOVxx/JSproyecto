@@ -1,0 +1,56 @@
+0 verbose cli D:\Dictado Cursos\UTP\Semestre 20251\JavaScript Avanzado\TurismoAngular\nodejs\node.exe D:\Dictado Cursos\UTP\Semestre 20251\JavaScript Avanzado\TurismoAngular\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.15.0
+3 silly config load:file:D:\Dictado Cursos\UTP\Semestre 20251\JavaScript Avanzado\TurismoAngular\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\ANTHONY\AppData\Local\Microsoft\TypeScript\5.9\.npmrc
+5 silly config load:file:C:\Users\ANTHONY\.npmrc
+6 silly config load:file:D:\Dictado Cursos\UTP\Semestre 20251\JavaScript Avanzado\TurismoAngular\npm-global\etc\npmrc
+7 verbose title npm install types-registry@latest
+8 verbose argv "install" "--ignore-scripts" "types-registry@latest"
+9 verbose logfile logs-max:10 dir:D:\Dictado Cursos\UTP\Semestre 20251\JavaScript Avanzado\TurismoAngular\npm-cache\_logs\2025-05-17T22_36_23_690Z-
+10 verbose logfile D:\Dictado Cursos\UTP\Semestre 20251\JavaScript Avanzado\TurismoAngular\npm-cache\_logs\2025-05-17T22_36_23_690Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 silly logfile done cleaning log files
+14 silly packumentCache corgi:https://registry.npmjs.org/types-registry cache-miss
+15 http fetch GET 200 https://registry.npmjs.org/types-registry 876ms (cache miss)
+16 silly packumentCache corgi:https://registry.npmjs.org/types-registry set size:undefined disposed:false
+17 silly idealTree buildDeps
+18 silly fetch manifest types-registry@0.1.720
+19 silly packumentCache full:https://registry.npmjs.org/types-registry cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/types-registry 285ms (cache miss)
+21 silly packumentCache full:https://registry.npmjs.org/types-registry set size:undefined disposed:false
+22 silly placeDep ROOT types-registry@0.1.720 REPLACE for:  want: 0.1.720
+23 silly reify mark retired [
+23 silly reify   'C:\\Users\\ANTHONY\\AppData\\Local\\Microsoft\\TypeScript\\5.9\\node_modules\\types-registry'
+23 silly reify ]
+24 silly reify moves {
+24 silly reify   'C:\\Users\\ANTHONY\\AppData\\Local\\Microsoft\\TypeScript\\5.9\\node_modules\\types-registry': 'C:\\Users\\ANTHONY\\AppData\\Local\\Microsoft\\TypeScript\\5.9\\node_modules\\.types-registry-n6ZfoiGT'
+24 silly reify }
+25 silly audit bulk request {
+25 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+25 silly audit   '@babel/helper-validator-identifier': [ '7.27.1' ],
+25 silly audit   '@babel/parser': [ '7.27.1' ],
+25 silly audit   '@babel/types': [ '7.27.1' ],
+25 silly audit   '@popperjs/core': [ '2.11.8' ],
+25 silly audit   '@types/babel__core': [ '7.20.5' ],
+25 silly audit   '@types/babel__generator': [ '7.27.0' ],
+25 silly audit   '@types/babel__preset-env': [ '7.10.0' ],
+25 silly audit   '@types/babel__template': [ '7.4.4' ],
+25 silly audit   '@types/babel__traverse': [ '7.20.7' ],
+25 silly audit   '@types/bootstrap': [ '5.2.10' ],
+25 silly audit   '@types/copyfiles': [ '2.4.4' ],
+25 silly audit   'types-registry': [ '0.1.720' ]
+25 silly audit }
+26 http cache types-registry@https://registry.npmjs.org/types-registry/-/types-registry-0.1.720.tgz 0ms (cache hit)
+27 silly tarball no local data for types-registry@https://registry.npmjs.org/types-registry/-/types-registry-0.1.720.tgz. Extracting by manifest.
+28 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 344ms
+29 silly audit report {}
+30 http fetch GET 200 https://registry.npmjs.org/types-registry/-/types-registry-0.1.720.tgz 794ms (cache miss)
+31 silly CHANGE node_modules/types-registry
+32 verbose cwd C:\Users\ANTHONY\AppData\Local\Microsoft\TypeScript\5.9
+33 verbose os Windows_NT 10.0.19043
+34 verbose node v22.15.0
+35 verbose npm  v10.9.2
+36 verbose exit 0
+37 info ok
