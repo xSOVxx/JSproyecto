@@ -1,0 +1,21 @@
+<!-- views/libros.html -->
+<div class="container mt-4">
+    <h2 class="mb-3">Lista de Libros</h2>
+
+    <input type="text" ng-model="terminoBusqueda" placeholder="Buscar..." class="form-control mb-3" ng-change="buscar()"/>
+
+    <div class="row">
+        <div class="col-md-4 mb-4" ng-repeat="libro in libros">
+            <div class="card h-100">
+                <img ng-src="{{libro.imagen}}" class="card-img-top" alt="{{libro.titulo}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{libro.titulo}}</h5>
+                    <p class="card-text"><strong>Autor:</strong> {{libro.autor}}</p>
+                    <p class="card-text">{{libro.descripcion}}</p>
+                    <button class="btn btn-danger" ng-click="eliminar(libro.id)">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
