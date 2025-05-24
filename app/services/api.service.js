@@ -54,10 +54,32 @@ angular.module("proyectoApp").service("apiService", [
             return apiUrl;
         };
 
-        // Verificar la conexión inmediatamente al cargar
-        setTimeout(function() {
-            service.checkConnection();
-        }, 1000);
+        // Añadir un intervalo de reconexión más inteligente
+        var connectionCheckInterval;
+
+        service.startConnectionMonitoring = function() {
+            // Detener el intervalo existente si hay alguno
+            if(connectionCheckInterval) {
+                clearInterval(connectionCheckInterval);
+            }
+            
+            // Iniciar un nuevo intervalo, más frecuente cuando está desconectado
+            connectionCheckInterval = setInterval(function() {
+                service.checkConnection();
+            }, service.isConnected ? 10000 : 5000); // 10 segundos si está conectado, 5 si no
+        };
+
+        // Iniciar el monitoreo en lugar del setTimeout único
+        service.startConnectionMonitoring();
+
+        // Modificar checkConnection para reiniciar el monitoreo
+        var originalCheckConnection = service.checkConnection;
+        service.checkConnection = function() {
+            return originalCheckConnection().finally(function() {
+                // Ajustar el intervalo basado en el nuevo estado
+                service.startConnectionMonitoring();
+            });
+        };
 
         return service;
     }

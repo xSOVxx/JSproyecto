@@ -1,0 +1,140 @@
+/* Estilos modernos para el catálogo que armonizan con el fondo */
+
+/* Contenedor principal con efecto de vidrio esmerilado */
+.card.mb-4 {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(10px) !important;
+    border: none !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #3a7bd5, #2456a8) !important;
+    border-radius: 15px 15px 0 0 !important;
+    border: none !important;
+    padding: 20px !important;
+}
+
+/* Tarjetas de productos con efecto elevado */
+.card {
+    height: 450px !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(5px) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    margin-bottom: 25px !important;
+    overflow: hidden !important;
+    transition: all 0.4s ease !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Contenedor para la imagen con borde suave */
+.card-img-contain {
+    height: 200px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    background-color: rgba(248, 249, 250, 0.7) !important;
+    padding: 15px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    transition: transform 0.5s ease !important;
+}
+
+.card:hover .card-img-contain {
+    transform: scale(1.05) !important;
+}
+
+/* Estilos para el cuerpo de la tarjeta */
+.card-body {
+    padding: 20px !important;
+    height: 250px !important;
+    overflow: auto !important;
+}
+
+/* Scrollbar personalizado para el cuerpo */
+.card-body::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+.card-body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.03) !important;
+}
+
+.card-body::-webkit-scrollbar-thumb {
+    background-color: rgba(58, 123, 213, 0.5) !important;
+    border-radius: 10px !important;
+}
+
+/* Estilos para los títulos */
+.card-title {
+    font-size: 19px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    height: 50px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+}
+
+/* Estilos para el autor */
+.card-text.text-muted {
+    font-size: 14px !important;
+    color: #5d6d7e !important;
+    margin-bottom: 12px !important;
+    font-style: italic !important;
+}
+
+/* Para las etiquetas/temas */
+.badge {
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    margin-right: 4px !important;
+    margin-bottom: 4px !important;
+    background-color: rgba(58, 123, 213, 0.15) !important;
+    color: #2456a8 !important;
+    border: 1px solid rgba(58, 123, 213, 0.3) !important;
+    padding: 6px 10px !important;
+    border-radius: 50px !important;
+}
+
+/* Precio destacado */
+.card-text strong {
+    color: #2c3e50 !important;
+}
+
+/* Botón principal con gradiente */
+.btn-primary {
+    background: linear-gradient(135deg, #3a7bd5, #2456a8) !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 8px 20px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(58, 123, 213, 0.3) !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(58, 123, 213, 0.4) !important;
+}
+
+/* Imagen de reemplazo cuando hay error */
+img.error-img {
+    opacity: 0.7 !important;
+    filter: grayscale(30%) !important;
+    border: 1px dashed rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Spinner de carga con estilo */
+.spinner-border.text-primary {
+    color: #3a7bd5 !important;
+    width: 3rem !important;
+    height: 3rem !important;
+}

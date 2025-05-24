@@ -42,13 +42,28 @@ angular.module("proyectoApp").service("librosService", [
         // ID para el próximo libro en modo local
         var nextId = librosLocales.length + 1;
         
+        // Añadir caché de resultados
+        var cachedLibros = null;
+        var lastCacheTime = 0;
+        var CACHE_DURATION = 30000; // 30 segundos
+        
         // Método para obtener todos los libros
         service.getLibros = function () {
+            // Usar caché si está disponible y es reciente
+            var now = Date.now();
+            if (cachedLibros && (now - lastCacheTime < CACHE_DURATION)) {
+                console.log("Usando caché de libros");
+                return Promise.resolve(cachedLibros);
+            }
+            
             if (apiService.isConnected) {
                 var apiUrl = apiService.getApiUrl();
                 return $http.get(apiUrl + "/libros")
                     .then(function(response) {
                         console.log("API: Libros obtenidos correctamente", response.data);
+                        // Actualizar caché
+                        cachedLibros = response.data;
+                        lastCacheTime = Date.now();
                         return response.data;
                     })
                     .catch(function(error) {
@@ -242,6 +257,12 @@ angular.module("proyectoApp").service("librosService", [
                     return { url: 'assets/images/placeholder.jpg' }; // Imagen de placeholder si falla la subida
                 }
             );
+        };
+        
+        // Añadir método para invalidar caché (usado cuando se modifica un libro)
+        service.invalidateCache = function() {
+            cachedLibros = null;
+            lastCacheTime = 0;
         };
         
         return service;

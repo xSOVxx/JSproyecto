@@ -1,6 +1,5 @@
 {
-  "libros": [
-    {
+  "libros": [{
       "id": "1",
       "titulo": "Matemáticas Avanzadas para Ingenieros",
       "autor": "Erwin Kreyszig",
@@ -65,6 +64,21 @@
       "temas": [
         "Microeconomía",
         "Macroeconomía",
+        "Mercados"
+      ],
+      "edicion": "5ta Edición",
+      "precio": 55
+    },
+
+    {
+      "id": "6",
+      "titulo": "contabilidad financiera",
+      "autor": "Maria Homo Bueno",
+      "descripcion": "Acerca de la contabilidad y finanzas.",
+      "imagen": "assets/images/contabilidad.jpg",
+      "temas": [
+        "contabilidad",
+        "finanzas",
         "Mercados"
       ],
       "edicion": "5ta Edición",
