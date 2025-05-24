@@ -1,0 +1,88 @@
+{
+  "libros": [{
+      "id": "1",
+      "titulo": "Matemáticas Avanzadas para Ingenieros",
+      "autor": "Erwin Kreyszig",
+      "descripcion": "Un libro fundamental para estudiantes de ingeniería, cubriendo cálculo vectorial, ecuaciones diferenciales, análisis complejo y álgebra lineal.",
+      "imagen": "assets/images/matematicas.jpg",
+      "temas": [
+        "Cálculo",
+        "Álgebra",
+        "Ecuaciones Diferenciales"
+      ],
+      "edicion": "10ma Edición",
+      "precio": 85
+    },
+    {
+      "id": "2",
+      "titulo": "Física para Ciencias e Ingeniería",
+      "autor": "Raymond A. Serway",
+      "descripcion": "Una introducción exhaustiva a la física, con énfasis en aplicaciones prácticas y problemas resueltos.",
+      "imagen": "assets/images/fisica.jpg",
+      "temas": [
+        "Mecánica",
+        "Termodinámica",
+        "Electromagnetismo"
+      ],
+      "edicion": "9na Edición",
+      "precio": 70
+    },
+    {
+      "id": "3",
+      "titulo": "Programación en C++",
+      "autor": "Bjarne Stroustrup",
+      "descripcion": "El libro definitivo para aprender C++ del creador del lenguaje. Ideal para principiantes y programadores experimentados.",
+      "imagen": "assets/images/cpp.jpg",
+      "temas": [
+        "Programación Orientada a Objetos",
+        "Algoritmos",
+        "Estructuras de Datos"
+      ],
+      "edicion": "4ta Edición",
+      "precio": 60
+    },
+    {
+      "id": "4",
+      "titulo": "Diseño de Algoritmos",
+      "autor": "Thomas H. Cormen",
+      "descripcion": "Una guía completa sobre el diseño y análisis de algoritmos, indispensable para cualquier profesional de la informática.",
+      "imagen": "assets/images/algoritmos.jpg",
+      "temas": [
+        "Algoritmos",
+        "Estructuras de Datos",
+        "Complejidad Computacional"
+      ],
+      "edicion": "3ra Edición",
+      "precio": 75
+    },
+    {
+      "id": "5",
+      "titulo": "Introducción a la Economía",
+      "autor": "Paul Krugman",
+      "descripcion": "Un texto accesible que introduce los principios fundamentales de la micro y macroeconomía.",
+      "imagen": "assets/images/economia.jpg",
+      "temas": [
+        "Microeconomía",
+        "Macroeconomía",
+        "Mercados"
+      ],
+      "edicion": "5ta Edición",
+      "precio": 55
+    },
+
+    {
+      "id": "6",
+      "titulo": "contabilidad financiera",
+      "autor": "Maria Homo Bueno",
+      "descripcion": "Acerca de la contabilidad y finanzas.",
+      "imagen": "assets/images/contabilidad.jpg",
+      "temas": [
+        "contabilidad",
+        "finanzas",
+        "Mercados"
+      ],
+      "edicion": "5ta Edición",
+      "precio": 55
+    }
+  ]
+}

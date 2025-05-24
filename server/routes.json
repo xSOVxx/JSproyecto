@@ -1,0 +1,4 @@
+{
+    "/*": "/$1",
+    "/libros/buscar/:termino": "/libros?q=:termino"
+}
