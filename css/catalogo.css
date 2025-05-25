@@ -10,23 +10,25 @@
 }
 
 .card-header {
-    background: linear-gradient(135deg, #3a7bd5, #2456a8) !important;
+    background: linear-gradient(135deg, #368043, #1da16a) !important; /* Cambiado para combinar con navbar */
     border-radius: 15px 15px 0 0 !important;
     border: none !important;
     padding: 20px !important;
 }
 
-/* Tarjetas de productos con efecto elevado */
+/* Tarjetas de productos con efecto elevado - AJUSTADO CON ALTURA FIJA */
 .card {
-    height: 450px !important;
+    height: 450px !important; /* Cambiado a altura fija para consistencia */
     background-color: rgba(255, 255, 255, 0.9) !important;
     backdrop-filter: blur(5px) !important;
     border: none !important;
     border-radius: 12px !important;
     margin-bottom: 25px !important;
-    overflow: hidden !important;
+    overflow: hidden !important; /* Mantener esto para evitar desbordamiento */
     transition: all 0.4s ease !important;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 .card:hover {
@@ -36,7 +38,7 @@
 
 /* Contenedor para la imagen con borde suave */
 .card-img-contain {
-    height: 200px !important;
+    height: 180px !important; /* Reducido para equilibrar mejor el espacio */
     width: 100% !important;
     object-fit: contain !important;
     object-position: center !important;
@@ -50,58 +52,69 @@
     transform: scale(1.05) !important;
 }
 
-/* Estilos para el cuerpo de la tarjeta */
+/* Estilos para el cuerpo de la tarjeta - CON SCROLL MEJORADO */
 .card-body {
-    padding: 20px !important;
-    height: 250px !important;
-    overflow: auto !important;
+    padding: 15px !important;
+    height: 235px !important; /* Altura fija para el cuerpo */
+    overflow-y: auto !important; /* Scroll vertical cuando sea necesario */
+    display: flex !important;
+    flex-direction: column !important;
 }
 
-/* Scrollbar personalizado para el cuerpo */
+/* Estilos mejorados para el scrollbar */
 .card-body::-webkit-scrollbar {
-    width: 6px !important;
+    width: 8px !important; /* Scroll más grande para mejor usabilidad */
 }
 
 .card-body::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.03) !important;
-}
-
-.card-body::-webkit-scrollbar-thumb {
-    background-color: rgba(58, 123, 213, 0.5) !important;
+    background: #f8f9fa !important;
     border-radius: 10px !important;
 }
 
-/* Estilos para los títulos */
+.card-body::-webkit-scrollbar-thumb {
+    background: rgba(54, 128, 67, 0.5) !important; /* Color verde para combinar */
+    border-radius: 10px !important;
+    border: 2px solid #f8f9fa !important; /* Borde para refinamiento */
+}
+
+.card-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(54, 128, 67, 0.7) !important;
+}
+
+/* ELIMINADO: todos los estilos de scrollbar */
+
+/* Estilos para los títulos - CORREGIDO */
 .card-title {
-    font-size: 19px !important;
+    font-size: 18px !important;
     font-weight: 600 !important;
     color: #2c3e50 !important;
-    height: 50px !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 2 !important;
-    -webkit-box-orient: vertical !important;
+    margin-bottom: 8px !important;
+    /* Eliminados los límites de altura y clamp */
+    overflow: visible !important;
+    text-overflow: initial !important;
+    display: block !important;
+    -webkit-line-clamp: initial !important;
+    -webkit-box-orient: initial !important;
 }
 
 /* Estilos para el autor */
 .card-text.text-muted {
     font-size: 14px !important;
     color: #5d6d7e !important;
-    margin-bottom: 12px !important;
+    margin-bottom: 8px !important; /* Reducido */
     font-style: italic !important;
 }
 
-/* Para las etiquetas/temas */
+/* Para las etiquetas/temas - AJUSTADO */
 .badge {
     font-size: 11px !important;
     font-weight: 500 !important;
-    margin-right: 4px !important;
-    margin-bottom: 4px !important;
-    background-color: rgba(58, 123, 213, 0.15) !important;
-    color: #2456a8 !important;
-    border: 1px solid rgba(58, 123, 213, 0.3) !important;
-    padding: 6px 10px !important;
+    margin-right: 3px !important;
+    margin-bottom: 3px !important;
+    background-color: rgba(54, 128, 67, 0.15) !important; /* Cambiado para combinar con navbar */
+    color: #1d8348 !important; /* Verde más oscuro para mejor legibilidad */
+    border: 1px solid rgba(54, 128, 67, 0.3) !important;
+    padding: 4px 8px !important; /* Reducido ligeramente */
     border-radius: 50px !important;
 }
 
@@ -110,19 +123,20 @@
     color: #2c3e50 !important;
 }
 
-/* Botón principal con gradiente */
+/* Botón principal con gradiente - AJUSTADO para combinar con navbar */
 .btn-primary {
-    background: linear-gradient(135deg, #3a7bd5, #2456a8) !important;
+    background: linear-gradient(135deg, #368043, #1da16a) !important;
     border: none !important;
     border-radius: 50px !important;
     padding: 8px 20px !important;
     transition: all 0.3s ease !important;
-    box-shadow: 0 4px 15px rgba(58, 123, 213, 0.3) !important;
+    box-shadow: 0 4px 15px rgba(54, 128, 67, 0.3) !important;
+    margin-top: auto !important; /* Empuja el botón hacia abajo */
 }
 
 .btn-primary:hover {
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 20px rgba(58, 123, 213, 0.4) !important;
+    box-shadow: 0 8px 20px rgba(54, 128, 67, 0.4) !important;
 }
 
 /* Imagen de reemplazo cuando hay error */
@@ -132,9 +146,16 @@ img.error-img {
     border: 1px dashed rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Spinner de carga con estilo */
+/* Spinner de carga con estilo - AJUSTADO al nuevo color */
 .spinner-border.text-primary {
-    color: #3a7bd5 !important;
+    color: #368043 !important;
     width: 3rem !important;
     height: 3rem !important;
+}
+
+/* Mantener el footer siempre al final de la card */
+.card-footer {
+    margin-top: auto !important;
+    background: transparent !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
 }

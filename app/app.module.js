@@ -35,7 +35,7 @@ angular.module("proyectoApp", ["ngRoute"])
                     controller: "presentacionController",
                     controllerAs: "vm",
                 })
-
+                
                 .otherwise({
                     redirectTo: "/",
                 });

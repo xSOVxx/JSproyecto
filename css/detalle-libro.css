@@ -1,0 +1,35 @@
+/* Estilos de colores consistentes con el catálogo */
+
+/* Encabezado con el mismo gradiente verde */
+.card-header.bg-primary {
+    background: linear-gradient(135deg, #368043, #1da16a) !important;
+    border: none !important;
+}
+
+/* Botones principales con el mismo verde */
+.btn-primary, .btn-success {
+    background: linear-gradient(135deg, #368043, #1da16a) !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(54, 128, 67, 0.3) !important;
+}
+
+.btn-primary:hover, .btn-success:hover {
+    box-shadow: 0 8px 20px rgba(54, 128, 67, 0.4) !important;
+}
+
+/* Colores para badges/etiquetas */
+.badge.bg-secondary {
+    background-color: rgba(54, 128, 67, 0.15) !important;
+    color: #1d8348 !important;
+    border: 1px solid rgba(54, 128, 67, 0.3) !important;
+}
+
+/* Color para el spinner de carga */
+.spinner-border.text-primary {
+    color: #368043 !important;
+}
+
+/* Color para texto destacado (precio) */
+.text-success {
+    color: #2d8a4f !important;
+}
