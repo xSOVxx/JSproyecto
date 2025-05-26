@@ -35,7 +35,17 @@ angular.module("proyectoApp", ["ngRoute"])
                     controller: "presentacionController",
                     controllerAs: "vm",
                 })
-                
+
+                .when("/editar-libro/:id", {
+                    templateUrl: "app/components/editar-libro/editar-libro.component.html",
+                    controller: "EditarLibroController as vm",
+                })
+
+                .when("/editar-libro/:id", {
+                    templateUrl: "app/components/editar-libro/editar-libro.component.html",
+                    controller: "EditarLibroController as vm",
+                })
+
                 .otherwise({
                     redirectTo: "/",
                 });

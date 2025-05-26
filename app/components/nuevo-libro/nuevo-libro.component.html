@@ -1,0 +1,187 @@
+<link rel="stylesheet" href="css/nuevoLibro.css">
+
+<div class="container mt-4">
+    <h2 class="mb-4">Registrar Nuevo Libro</h2>
+    
+    <div class="white-background-panel p-4 rounded shadow-sm mb-5"> <form name="nuevoLibroForm" ng-submit="vm.submitForm()" novalidate>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Título <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="titulo" name="titulo" ng-model="vm.nuevoLibro.titulo" required minlength="3">
+                        <div ng-show="nuevoLibroForm.titulo.$dirty && nuevoLibroForm.titulo.$invalid">
+                            <small class="text-danger" ng-show="nuevoLibroForm.titulo.$error.required">El título es obligatorio.</small>
+                            <small class="text-danger" ng-show="nuevoLibroForm.titulo.$error.minlength">El título debe tener al menos 3 caracteres.</small>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="autor" class="form-label">Autor <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="autor" name="autor" ng-model="vm.nuevoLibro.autor" required minlength="3">
+                        <div ng-show="nuevoLibroForm.autor.$dirty && nuevoLibroForm.autor.$invalid">
+                            <small class="text-danger" ng-show="nuevoLibroForm.autor.$error.required">El autor es obligatorio.</small>
+                            <small class="text-danger" ng-show="nuevoLibroForm.autor.$error.minlength">El autor debe tener al menos 3 caracteres.</small>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion" ng-model="vm.nuevoLibro.descripcion" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="imagen" class="form-label">Imagen (URL o Subir Archivo)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="imagenUrl" name="imagenUrl" ng-model="vm.nuevoLibro.imagen" placeholder="URL de la imagen">
+                            <span class="input-group-text">o</span>
+                            <input type="file" class="form-control" id="imagenFile" name="imagenFile" onchange="angular.element(this).scope().vm.onFileSelect(this.files)">
+                        </div>
+                        <small class="form-text text-muted">Puedes ingresar una URL de imagen o subir un archivo. Si subes un archivo, la URL se generará automáticamente.</small>
+                        <div ng-if="vm.nuevoLibro.imagen">
+                            <img ng-src="{{vm.nuevoLibro.imagen}}" alt="Previsualización" class="img-thumbnail mt-2" style="max-width: 150px;">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="temas" class="form-label">Temas (separados por coma)</label>
+                        <input type="text" class="form-control" id="temas" name="temas" ng-model="vm.temasInput" placeholder="Ej: Cálculo, Álgebra">
+                    </div>
+                    <div class="mb-3">
+                        <label for="edicion" class="form-label">Edición</label>
+                        <input type="text" class="form-control" id="edicion" name="edicion" ng-model="vm.nuevoLibro.edicion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="precio" class="form-label">Precio <span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="precio" name="precio" ng-model="vm.nuevoLibro.precio" required min="0" step="0.01">
+                        <div ng-show="nuevoLibroForm.precio.$dirty && nuevoLibroForm.precio.$invalid">
+                            <small class="text-danger" ng-show="nuevoLibroForm.precio.$error.required">El precio es obligatorio.</small>
+                            <small class="text-danger" ng-show="nuevoLibroForm.precio.$error.min">El precio no puede ser negativo.</small>
+                            <small class="text-danger" ng-show="nuevoLibroForm.precio.$error.number">El precio debe ser un número.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end mt-4">
+                <button type="button" class="btn btn-secondary me-2" ng-click="vm.cancelForm()" ng-disabled="vm.cargando">Cancelar</button>
+                <button type="submit" class="btn btn-primary" ng-disabled="nuevoLibroForm.$invalid || vm.cargando">
+                    <span ng-if="!vm.cargando">Guardar Libro</span>
+                    <span ng-if="vm.cargando">Guardando... <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span></span>
+                </button>
+            </div>
+
+            <div ng-if="vm.successMessage" class="alert alert-success mt-3" role="alert">
+                {{vm.successMessage}}
+            </div>
+            <div ng-if="vm.errorMessage" class="alert alert-danger mt-3" role="alert">
+                {{vm.errorMessage}}
+            </div>
+        </form>
+    </div>
+
+    <div class="white-background-panel p-4 rounded shadow-sm">
+        <h3 class="mb-4">Libros Registrados</h3>
+
+        <div class="text-center my-4" ng-if="vm.cargandoLibros">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Cargando libros...</span>
+            </div>
+            <p class="mt-2">Cargando lista de libros...</p>
+        </div>
+
+        <div class="alert alert-info text-center" ng-if="!vm.cargandoLibros && vm.libros.length === 0">
+            No hay libros registrados aún. ¡Añade uno usando el formulario de arriba!
+        </div>
+
+        <div class="table-responsive" ng-if="!vm.cargandoLibros && vm.libros.length > 0">
+            <table class="table table-striped table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="libro in vm.libros track by libro.id">
+                        <td>{{libro.id}}</td>
+                        <td>
+                            <img ng-src="{{libro.imagen}}" alt="{{libro.titulo}}" class="img-thumbnail me-2" style="width: 50px; height: 50px; object-fit: cover;"
+                                onerror="this.src='assets/images/placeholder.jpg';">
+                            {{libro.titulo}}
+                        </td>
+                        <td>{{libro.autor}}</td>
+                        <td>${{libro.precio | number:2}}</td>
+                        <td>
+                            <button class="btn btn-sm btn-info me-2" ng-click="vm.editarLibro(libro)" title="Editar libro">
+                                <i class="bi bi-pencil-fill"></i> Editar
+                            </button>
+                            <button class="btn btn-sm btn-danger" ng-click="vm.eliminarLibro(libro)" ng-disabled="libro.isDeleting" title="Eliminar libro">
+                                <span ng-if="!libro.isDeleting"><i class="bi bi-trash-fill"></i> Eliminar</span>
+                                <span ng-if="libro.isDeleting">Eliminando... <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Modal de edición -->
+<div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <form name="editarLibroForm" ng-submit="vm.guardarEdicion()" novalidate>
+        <div class="modal-header">
+          <h5 class="modal-title" id="editarModalLabel">Editar Libro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="tituloEditar" class="form-label">Título</label>
+                <input type="text" class="form-control" id="tituloEditar" ng-model="vm.libroEditar.titulo" required>
+              </div>
+              <div class="mb-3">
+                <label for="autorEditar" class="form-label">Autor</label>
+                <input type="text" class="form-control" id="autorEditar" ng-model="vm.libroEditar.autor" required>
+              </div>
+              <div class="mb-3">
+                <label for="descripcionEditar" class="form-label">Descripción</label>
+                <textarea class="form-control" id="descripcionEditar" ng-model="vm.libroEditar.descripcion"></textarea>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="imagenEditar" class="form-label">Imagen</label>
+                <input type="text" class="form-control" id="imagenEditar" ng-model="vm.libroEditar.imagen">
+              </div>
+              <div class="mb-3">
+                <label for="temasEditar" class="form-label">Temas (separados por coma)</label>
+                <input type="text" class="form-control" id="temasEditar" ng-model="vm.temasEditar">
+              </div>
+              <div class="mb-3">
+                <label for="edicionEditar" class="form-label">Edición</label>
+                <input type="text" class="form-control" id="edicionEditar" ng-model="vm.libroEditar.edicion">
+              </div>
+              <div class="mb-3">
+                <label for="precioEditar" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="precioEditar" ng-model="vm.libroEditar.precio" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+</div>
