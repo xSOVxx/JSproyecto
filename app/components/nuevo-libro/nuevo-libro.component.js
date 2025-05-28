@@ -1,4 +1,4 @@
-// NUEVO-LIBRO.COMPONENT.JS (actualizado con modal de edición)
+// NUEVO-LIBRO.COMPONENT.JS 
 
 angular.module("proyectoApp").controller("NuevoLibroController", [
   "librosService",
