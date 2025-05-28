@@ -46,6 +46,13 @@ angular.module("proyectoApp", ["ngRoute"])
                     controller: "EditarLibroController as vm",
                 })
 
+                .when("/iniciar", {
+                    templateUrl: "app/components/iniciar-sesion/iniciar-sesion.component.html",
+                    controller: "LoginController"
+                })
+
+
+
                 .otherwise({
                     redirectTo: "/",
                 });
