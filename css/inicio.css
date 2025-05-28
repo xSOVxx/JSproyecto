@@ -1,0 +1,29 @@
+body.inicio-bg {
+    background: url('../../assets/images/fondo.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.inicio-card {
+    border-radius: 1.2rem;
+}
+
+.white-background-panel {
+    background: rgba(255,255,255,0.97);
+    color: #222 !important;
+}
+.white-background-panel .list-group-item {
+    background: transparent;
+    color: #222 !important;
+    font-weight: 500;
+    border: none;
+}
+.white-background-panel .card-title,
+.white-background-panel .card-text {
+    color: #1a3c40 !important;
+}
+.white-background-panel .card-title {
+    font-weight: 700;
+}
+.white-background-panel .fw-bold {
+    color: #145a32 !important;
+}
